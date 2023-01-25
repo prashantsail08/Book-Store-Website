@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+	<display-name>OnlineBookStore</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+<listener>
+<listener-class>com.OnlineBookStore.Listener.DBListener</listener-class>
+</listener>
+
+<context-param>
+<param-name>isHome</param-name>
+<param-value>true</param-value>
+</context-param>
+
+	<servlet>
+		<servlet-name>BookController</servlet-name>
+		<servlet-class>com.OnlineBookStore.Controller.BookController</servlet-class>
+	</servlet>
+
+	<servlet-mapping> 
+		<servlet-name>BookController</servlet-name>
+		<url-pattern>/bookcontroller</url-pattern>
+	</servlet-mapping>
+ <servlet>
+		<servlet-name>CustomerController</servlet-name>
+		<servlet-class>com.OnlineBookStore.Controller.CustomerController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CustomerController</servlet-name>
+		<url-pattern>/customercontroller</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UploadImageController</servlet-name>
+		<servlet-class>com.OnlineBookStore.Controller.UploadImageController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UploadImageController</servlet-name>
+		<url-pattern>/uploadimagecontroller</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

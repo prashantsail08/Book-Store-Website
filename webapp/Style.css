@@ -1,0 +1,17 @@
+.InputError
+{
+border: 2px solid red;	
+}
+
+.red{
+	background-color: white;
+	color:red;
+}
+.orange{
+	background-color: white;
+	color: orange; 
+}
+.green{
+	background-color: white;
+	color: green; 
+}
